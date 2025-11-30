@@ -44,7 +44,7 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section id="work" ref={ref} className="section-container">
+    <section id="work" ref={ref} className="section-container pt-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

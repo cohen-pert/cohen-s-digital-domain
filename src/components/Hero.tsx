@@ -1,52 +1,58 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Bot, TrendingUp, Building2, Settings } from "lucide-react";
+import { ArrowRight, Sparkles, Rocket, Layers, Cpu } from "lucide-react";
+import techBg from "@/assets/tech-background.jpg";
 
 const Hero = () => {
   const stats = [
-    { icon: Bot, label: "AI Automation" },
-    { icon: TrendingUp, label: "Business Consulting" },
-    { icon: Building2, label: "Venture Building" },
-    { icon: Settings, label: "Systems & Operations" },
+    { icon: Sparkles, label: "AI Automation" },
+    { icon: Rocket, label: "Business Consulting" },
+    { icon: Layers, label: "Venture Building" },
+    { icon: Cpu, label: "Systems & Operations" },
   ];
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Tech Background */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <img src={techBg} alt="" className="w-full h-full object-cover" />
+      </div>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.1, 0.15, 0.1],
+            scale: [1, 1.1, 1],
+            opacity: [0.05, 0.1, 0.05],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1.1, 1, 1.1],
+            opacity: [0.05, 0.08, 0.05],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl"
         />
       </div>
 
       <div className="section-container relative z-10">
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-display text-6xl md:text-8xl font-bold mb-4">
+            <h1 className="font-display text-7xl md:text-9xl font-bold mb-6 tracking-tight">
               <span className="gold-gradient-text">Cohen Pert</span>
             </h1>
           </motion.div>
@@ -55,13 +61,12 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-foreground/90 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed font-light"
           >
             Young entrepreneur building AI-powered systems and ventures.
             <br />
-            <span className="text-foreground/70">
-              I help small business owners run smoother, grow faster, and adopt real AI
-              solutions that actually work.
+            <span className="text-foreground/60">
+              Helping small businesses run smoother, grow faster, and adopt AI that works.
             </span>
           </motion.p>
 
@@ -69,20 +74,20 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
+            className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4"
           >
             <a
               href="https://cal.com/cohen-pert/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-8 py-4 bg-gold text-primary-foreground font-bold text-lg rounded-lg hover:bg-gold-light transition-all gold-glow-lg flex items-center gap-2"
+              className="group px-10 py-5 bg-gold text-primary-foreground font-bold text-lg rounded-xl hover:bg-gold-light transition-all gold-glow-lg flex items-center gap-3 shadow-2xl"
             >
               Book a Call
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#work"
-              className="px-8 py-4 border-2 border-gold text-gold font-bold text-lg rounded-lg hover:bg-gold/10 transition-all flex items-center gap-2"
+              className="px-10 py-5 border-2 border-gold/50 text-gold font-semibold text-lg rounded-xl hover:bg-gold/10 hover:border-gold transition-all flex items-center gap-3"
             >
               View My Work
             </a>
@@ -92,7 +97,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-12"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-16"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -100,10 +105,10 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                className="flex flex-col items-center gap-2 p-4 rounded-lg bg-card/50 border border-border/50 hover:border-gold/50 transition-colors"
+                className="flex flex-col items-center gap-3 p-6 rounded-xl bg-card/30 border border-border/30 hover:border-gold/50 hover:bg-card/50 transition-all group"
               >
-                <stat.icon className="w-6 h-6 text-gold" />
-                <span className="text-xs text-center text-foreground/70">{stat.label}</span>
+                <stat.icon className="w-8 h-8 text-gold group-hover:scale-110 transition-transform" strokeWidth={1.5} />
+                <span className="text-sm text-center text-foreground/70 font-medium">{stat.label}</span>
               </motion.div>
             ))}
           </motion.div>

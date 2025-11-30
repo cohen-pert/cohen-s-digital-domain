@@ -14,9 +14,18 @@ const SnapshotStats = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 border-y border-border/50">
+    <section ref={ref} className="py-12 border-y border-border/30">
       <div className="section-container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-6"
+        >
+          <p className="text-sm text-gold font-semibold tracking-wider uppercase">The Pert Group Metrics</p>
+        </motion.div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -28,10 +37,9 @@ const SnapshotStats = () => {
               <div className="text-4xl md:text-5xl font-display font-bold gold-gradient-text">
                 {stat.number}
               </div>
-              <div className="text-sm md:text-base text-foreground/70 group-hover:text-foreground/90 transition-colors">
+              <div className="text-xs md:text-sm text-foreground/60 group-hover:text-foreground/80 transition-colors font-medium">
                 {stat.label}
               </div>
-              <div className="h-0.5 w-12 mx-auto bg-gold/0 group-hover:bg-gold transition-all duration-300" />
             </motion.div>
           ))}
         </div>

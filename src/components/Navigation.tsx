@@ -33,7 +33,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#hero" className="font-display text-xl font-bold gold-gradient-text">
-            CP
+            Cohen Pert
           </a>
 
           <div className="hidden md:flex items-center gap-8">
