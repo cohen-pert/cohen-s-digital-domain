@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Truck, Users } from "lucide-react";
-import businessWorkImg from "@/assets/business-work.jpg";
-import investingWorkImg from "@/assets/investing-work.jpg";
 
 const Projects = () => {
   const ref = useRef(null);
@@ -15,14 +13,14 @@ const Projects = () => {
       name: "Mobile Food Business OS",
       description: "A complete business operating system for King of Pops entrepreneurs and local food truck operators.",
       focus: "CRM, scheduling, inventory, payments, and growth analytics",
-      image: businessWorkImg,
+      gradient: "from-orange-500/20 via-red-500/20 to-pink-500/20",
     },
     {
       icon: Users,
       name: "Investment Group",
       description: "A private group of operators and professionals evaluating and investing in standout entrepreneurial ideas.",
       focus: "Prestigious network of investors and founders",
-      image: investingWorkImg,
+      gradient: "from-blue-500/20 via-purple-500/20 to-pink-500/20",
     },
   ];
 
@@ -34,7 +32,7 @@ const Projects = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h2 className="font-display text-4xl md:text-6xl font-bold mb-4">
+        <h2 className="font-display text-5xl md:text-7xl font-bold mb-4">
           Other <span className="gold-gradient-text">Projects</span>
         </h2>
         <p className="text-xl text-muted-foreground">Additional ventures & initiatives</p>
@@ -49,19 +47,11 @@ const Projects = () => {
             transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             className="card-premium overflow-hidden group"
           >
-            <div className="relative h-48 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
+            <div className={`relative h-40 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+              <project.icon className="w-16 h-16 text-gold opacity-80 group-hover:scale-110 transition-transform" strokeWidth={1.5} />
             </div>
 
             <div className="p-8 space-y-4">
-              <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center">
-                <project.icon className="w-6 h-6 text-gold" />
-              </div>
 
               <h3 className="font-display text-2xl font-bold">{project.name}</h3>
               <p className="text-foreground/70 leading-relaxed">{project.description}</p>
