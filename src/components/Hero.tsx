@@ -52,8 +52,11 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-display text-7xl md:text-9xl font-bold mb-6 tracking-tight">
+            <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight">
               <span className="gold-gradient-text">Cohen Pert</span>
+              <span className="block text-2xl md:text-3xl lg:text-4xl font-light text-foreground/80 mt-4 tracking-normal">
+                AI Automation & Business Systems Builder
+              </span>
             </h1>
           </motion.div>
 
@@ -61,13 +64,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed font-light"
           >
-            Young entrepreneur building AI-powered systems and ventures.
-            <br />
-            <span className="text-foreground/60">
-              Helping small businesses run smoother, grow faster, and adopt AI that works.
-            </span>
+            I help small businesses streamline operations and grow faster through AI automation, 
+            custom business systems, and strategic consulting. From workflow automation to 
+            full-scale AI integration, I build solutions that actually work.
           </motion.p>
 
           <motion.div
