@@ -1,3 +1,6 @@
+# Robots.txt for cohenpert.me
+# Allow all search engine crawlers
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +13,28 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+# Default rule for all other crawlers
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://cohenpert.me/sitemap.xml
