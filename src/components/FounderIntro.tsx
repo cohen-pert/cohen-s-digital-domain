@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import headshotImage from "@/assets/cohen-headshot.png";
-import { Linkedin } from "lucide-react";
+import { Linkedin, ExternalLink } from "lucide-react";
 
 const metrics = [
   { number: "12+", label: "Businesses Served" },
+  { number: "20+", label: "Projects Completed" },
   { number: "5x", label: "Average ROI" },
   { number: "$50K+", label: "Company Valuation" },
   { number: "$10K", label: "Grant Winner" },
-  { number: "2", label: "Organizations" },
+  { number: "2", label: "Organizations Run" },
 ];
 
 const FounderIntro = () => {
@@ -52,22 +53,33 @@ const FounderIntro = () => {
               reducing manual work, and building infrastructure that scales.
             </p>
 
-            <p className="text-foreground/60 leading-relaxed text-sm">
+            <p className="text-foreground/70 leading-relaxed">
               Starting my first business at age 7, investing in markets by 10, managing a 14-person 
               sales team by 13, and founding a company at 15 — I've spent nearly a decade building 
               and operating ventures. Winner of a $10K Emergent Ventures grant and 2nd place National 
               Youth Entrepreneurship Award.
             </p>
 
-            <a
-              href="https://www.linkedin.com/in/cohen-pert-a4bb51300/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border border-border/50 rounded-lg text-foreground/70 hover:border-gold/50 hover:text-gold transition-all group"
-            >
-              <Linkedin className="w-4 h-4" />
-              Connect on LinkedIn
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://www.linkedin.com/in/cohen-pert-a4bb51300/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border border-border/50 rounded-lg text-foreground/70 hover:border-gold/50 hover:text-gold transition-all group"
+              >
+                <Linkedin className="w-4 h-4" />
+                Connect on LinkedIn
+              </a>
+              <a
+                href="https://www.the-pert-group.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border border-border/50 rounded-lg text-foreground/70 hover:border-gold/50 hover:text-gold transition-all group"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Visit The Pert Group
+              </a>
+            </div>
           </motion.div>
 
           {/* Right: Metrics */}
@@ -76,7 +88,7 @@ const FounderIntro = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {metrics.map((metric, index) => (
                 <motion.div
                   key={metric.label}
