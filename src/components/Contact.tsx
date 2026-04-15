@@ -1,32 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Personal Email",
-      value: "cohenpert@gmail.com",
-      href: "mailto:cohenpert@gmail.com",
-    },
-    {
-      icon: Mail,
-      label: "Work Email",
-      value: "cohen@the-pert-group.com",
-      href: "mailto:cohen@the-pert-group.com",
-    },
-    {
-      icon: Phone,
-      label: "Company Phone",
-      value: "+1 (470) 256-5977",
-      href: "tel:+14702565977",
-    },
-  ];
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section id="contact" ref={ref} className="section-container">
@@ -34,62 +13,38 @@ const Contact = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="text-center max-w-2xl mx-auto"
       >
-        <h2 className="font-display text-5xl md:text-7xl font-bold mb-6">
+        <h2 className="font-display text-4xl md:text-6xl font-bold mb-4">
           Let's <span className="gold-gradient-text">Talk</span>
         </h2>
-        <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-          Whether you're a business owner needing automation, a student interested in tech, or someone
-          exploring an investment collaboration — reach out anytime.
+        <p className="text-foreground/60 text-lg mb-10 leading-relaxed">
+          Whether you need automation for your business, want to explore an investment opportunity, 
+          or just want to connect — I'd love to chat.
         </p>
+
+        <a
+          href="https://cal.com/cohen-pert/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-3 px-12 py-5 bg-gold text-primary-foreground font-bold text-lg rounded-lg hover:bg-gold-light transition-all gold-glow-lg"
+        >
+          Book a Call
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-12 text-sm text-foreground/50">
+          <a href="mailto:cohenpert@gmail.com" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <Mail className="w-4 h-4" /> cohenpert@gmail.com
+          </a>
+          <a href="mailto:cohen@the-pert-group.com" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <Mail className="w-4 h-4" /> cohen@the-pert-group.com
+          </a>
+          <a href="tel:+14702565977" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <Phone className="w-4 h-4" /> +1 (470) 256-5977
+          </a>
+        </div>
       </motion.div>
-
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12">
-        {/* Left Side - Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6"
-        >
-          {contactInfo.map((info, index) => (
-            <motion.a
-              key={index}
-              href={info.href}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="card-premium p-6 flex items-center gap-6 group block"
-            >
-              <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                <info.icon className="w-6 h-6 text-gold" />
-              </div>
-              <div className="flex-1">
-                <div className="text-xs text-muted-foreground mb-1 uppercase tracking-wider">{info.label}</div>
-                <div className="font-semibold text-foreground group-hover:text-gold transition-colors">
-                  {info.value}
-                </div>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
-
-        {/* Right Side - Embedded Booking */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="card-premium p-2 overflow-hidden"
-        >
-          <iframe
-            src="https://cal.com/cohen-pert/30min"
-            className="w-full h-[600px] rounded-lg"
-            frameBorder="0"
-            title="Book a call with Cohen Pert"
-          />
-        </motion.div>
-      </div>
     </section>
   );
 };
