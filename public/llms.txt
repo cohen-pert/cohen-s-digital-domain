@@ -1,0 +1,20 @@
+# Cohen Pert
+
+> Personal site of Cohen Pert — young entrepreneur, builder, and operator focused on AI automation and business systems. Founder of The Pert Group.
+
+Cohen Pert builds AI-powered systems that help businesses automate operations and scale faster. The site covers his background, the organizations he runs, featured projects, his journey, and how to get in touch.
+
+## Pages
+
+- [Home](/): Overview of Cohen Pert, his work, projects, and contact info.
+- [About / Founder Intro](/#about): Who Cohen is, key metrics, and links to The Pert Group and LinkedIn.
+- [What I Run](/#company): Organizations and ventures Cohen leads, including The Pert Group.
+- [Featured Projects](/#work): Real estate, food business OS, investment fund, and other builds.
+- [Journey / Timeline](/#timeline): Milestones across Cohen's entrepreneurial path.
+- [How I Work](/#how): Operating principles and approach to building.
+- [Contact](/#contact): Book a call or reach out directly.
+
+## Optional
+
+- [The Pert Group](https://the-pert-group.com): AI consulting agency founded by Cohen Pert.
+- [LinkedIn](https://www.linkedin.com/in/cohen-pert-a4bb51300/): Professional profile.
