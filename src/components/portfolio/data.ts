@@ -1,5 +1,7 @@
 export const BOOKING = 'https://cal.com/cohen-pert/30min';
 export const LINKEDIN = 'https://www.linkedin.com/in/cohen-pert-a4bb51300/';
+export const INVESTMENT_MEMBERS = 100;
+export const PERSONAL_PHONE = { display: '+1 (470) 323-2832', href: 'tel:+14703232832' };
 export const navItems = [
   { label: 'About', id: 'about' }, { label: 'Ventures', id: 'company' },
   { label: 'Projects', id: 'work' }, { label: 'Journey', id: 'timeline' },
@@ -14,11 +16,10 @@ export const honors = [
   { date: 'Dec 2023', title: '2nd Place in the US', org: 'FBLA Stock Market Game (team)', text: '' },
 ];
 export const leadership = [
-  { title: 'Lambert Investment Club', role: 'President', date: 'Aug 2024 to present', text: "I lead the largest student-run finance club at my school. I grew membership from 0 to 60+, lead a 5-person leadership team, and run weekly meetings and investment simulations. I teach stock research and markets and prepare members for competitions.", tag: 'Markets & investing' },
-  { title: 'Lambert Entrepreneurship Club', role: 'President', date: 'Current', text: 'I lead students who want to start and run real businesses.', tag: 'Building businesses' },
+  { title: 'Lambert Investment Club', role: 'President', date: 'Aug 2024 to present', text: `I lead the largest student-run finance club at my school. I grew membership from 0 to ${INVESTMENT_MEMBERS}+, lead a 5-person leadership team, and run weekly meetings and investment simulations. I teach stock research and markets and prepare members for competitions.`, tag: 'Markets & investing' },
+  { title: 'Lambert Entrepreneurship Club', role: 'President', date: 'Current', text: 'I lead students who want to start and run real businesses, with a focus on turning ideas into practical plans and thinking through what it takes to build and operate a business.', tag: 'Building businesses' },
   { title: 'Junior Law Society', role: 'Director of Finance', date: 'Aug 2026 to present', text: 'I oversee financial planning, budgeting, and financial operations for a national nonprofit expanding access to legal education.', tag: 'National nonprofit' },
   { title: "Young Men's Service League", role: 'Leadership Chair', date: 'Aug 2025 to present', text: 'I serve as Leadership Chair for the Forsyth chapter.', tag: 'Service & leadership' },
-  { title: 'FBLA', role: 'Member', date: 'Since Aug 2021', text: 'Future Business Leaders of America.', tag: 'Business & competition' },
 ];
 export type Category = 'Ventures' | 'Finance' | 'Leadership' | 'Work';
 export type Experience = { id: string; date: string; title: string; org: string; text: string; categories: Category[]; bullets: string[] };
@@ -35,7 +36,7 @@ export const experiences: Experience[] = [
   { id: 'pops-retail', date: 'Oct 2022 to Sep 2025', title: 'Retail Associate', org: 'King of Pops', text: 'I worked with customers and operated mobile cart sales at events and festivals.', categories: ['Work'], bullets: ['Customer service at events and festivals.', 'Mobile cart sales and transactions.'] },
   { id: 'research', date: 'Feb 2024 to Jul 2024', title: 'Research Associate', org: 'Construction Market Consultants, Inc. · Internship', text: 'I supported lead generation and CRM work.', categories: ['Work'], bullets: ['Lead generation.', 'CRM support.'] },
   { id: 'camp', date: 'May 2022 to Jul 2022', title: 'Junior Counselor', org: 'Camp Arrowhead · Milton, GA', text: 'I worked as a junior counselor at Camp Arrowhead.', categories: ['Work'], bullets: ['Junior Counselor in Milton, Georgia.'] },
-  { id: 'investment-club', date: 'Aug 2024 to present', title: 'President', org: 'Lambert Investment Club', text: 'I grew the club from 0 to 60+ members and lead a 5-person leadership team.', categories: ['Leadership'], bullets: ['Weekly meetings, investment simulations, stock research, and markets.', 'Preparing members for competitions.'] },
+  { id: 'investment-club', date: 'Aug 2024 to present', title: 'President', org: 'Lambert Investment Club', text: `I grew the club from 0 to ${INVESTMENT_MEMBERS}+ members and lead a 5-person leadership team.`, categories: ['Leadership'], bullets: ['Weekly meetings, investment simulations, stock research, and markets.', 'Preparing members for competitions.'] },
   { id: 'entrepreneurship', date: 'Current', title: 'President', org: 'Lambert Entrepreneurship Club', text: 'I lead students who want to start and run real businesses.', categories: ['Leadership'], bullets: ['Student entrepreneurship and business leadership.'] },
   { id: 'ymsl', date: 'Aug 2025 to present', title: 'Leadership Chair', org: 'Forsyth YMSL', text: "I serve as Leadership Chair in the Forsyth chapter of Young Men's Service League.", categories: ['Leadership'], bullets: ['Leadership Chair for the Forsyth chapter.'] },
   { id: 'grant', date: 'Oct 2025', title: 'Emergent Ventures Grant', org: 'Mercatus Center at George Mason University', text: 'I pitched a new app to be built by The Pert Group and received a $10,000 grant.', categories: ['Ventures'], bullets: ['$10,000 grant for a new app to be built by The Pert Group.'] },
