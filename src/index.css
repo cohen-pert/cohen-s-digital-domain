@@ -27,7 +27,7 @@
  a {text-decoration:none;} button,a {-webkit-tap-highlight-color:transparent;}
  a:focus-visible,button:focus-visible {outline:2px solid hsl(var(--gold));outline-offset:5px;}
  ::selection {background:hsl(var(--gold)/.28);color:hsl(var(--foreground));}
- section[id] {scroll-margin-top:90px;}
+  section[id] {scroll-margin-top:0;}
 }
 .portfolio-site {overflow:clip;position:relative;}
 .portfolio-site::before {content:'';position:absolute;inset:600px 0 0;pointer-events:none;z-index:-1;background-image:linear-gradient(hsl(var(--foreground)/.016) 1px,transparent 1px),linear-gradient(90deg,hsl(var(--foreground)/.016) 1px,transparent 1px);background-size:90px 90px;}
