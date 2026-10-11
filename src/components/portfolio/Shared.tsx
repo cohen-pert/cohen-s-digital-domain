@@ -33,5 +33,5 @@ export function TiltCard({ children, className = '' }: { children: ReactNode; cl
 export function Counter({ value, prefix = '', suffix = '' }: { value: number; prefix?: string; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null); const inView = useInView(ref, { once:true }); const reduced = useReducedMotion(); const [count, setCount] = useState(0);
   useEffect(() => { if(!inView || reduced) return; let frame=0; let start=0; function step(t:number) { if(!start) start=t; const p=Math.min((t-start)/1300,1); setCount(Math.round(value*(1-Math.pow(1-p,3)))); if(p<1) frame=requestAnimationFrame(step); } frame=requestAnimationFrame(step); return () => cancelAnimationFrame(frame); }, [inView, reduced, value]);
-  return <span ref={ref} aria-label={`${prefix}${value}${suffix}`}><span aria-hidden="true">{prefix}{reduced ? value : count}{suffix}</span></span>;
+  return <span ref={ref}><span className="sr-only">{prefix}{value}{suffix}</span><span aria-hidden="true">{prefix}{reduced ? value : count}{suffix}</span></span>;
 }
