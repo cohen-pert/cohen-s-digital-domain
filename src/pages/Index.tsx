@@ -1,31 +1,28 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import FounderIntro from "@/components/FounderIntro";
-import WhatIRun from "@/components/WhatIRun";
-import FeaturedProjects from "@/components/FeaturedProjects";
-import Timeline from "@/components/Timeline";
-import BehindTheScenes from "@/components/BehindTheScenes";
-import HowIWork from "@/components/HowIWork";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { MotionConfig } from "framer-motion";
+import Navigation from "@/components/portfolio/Navigation";
+import Journey from "@/components/portfolio/Journey";
+import { Hero, About, Ventures, Projects, Leadership, Honors, Education, BehindScenes, HowIWork, Contact, Footer } from "@/components/portfolio/Sections";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen">
+const Index = () => (
+  <MotionConfig reducedMotion="user">
+    <div className="portfolio-site">
+      <a href="#main-content" className="skip-link">Skip to content</a>
       <Navigation />
-      <main role="main">
+      <main id="main-content">
         <Hero />
-        <FounderIntro />
-        <WhatIRun />
-        <FeaturedProjects />
-        <Timeline />
-        <BehindTheScenes />
+        <About />
+        <Ventures />
+        <Projects />
+        <Journey />
+        <Leadership />
+        <Honors />
+        <Education />
+        <BehindScenes />
         <HowIWork />
         <Contact />
       </main>
       <Footer />
     </div>
-  );
-};
-
+  </MotionConfig>
+);
 export default Index;
