@@ -1,20 +1,23 @@
 # Cohen Pert
 
-> Personal site of Cohen Pert — young entrepreneur, builder, and operator focused on AI automation and business systems. Founder of The Pert Group.
+> Entrepreneur, operator, and investor in Cumming, Georgia. Founder & CEO of Pert Digital and Managing Director of The Pert Group.
 
-Cohen Pert builds AI-powered systems that help businesses automate operations and scale faster. The site covers his background, the organizations he runs, featured projects, his journey, and how to get in touch.
+I build businesses, improve how they run, and invest for the long term. Pert Digital is a growth and operations partner for local home-service businesses. The Pert Group LLC is the private parent and holding company behind Pert Digital and future ventures.
 
-## Pages
+## Site sections
+- [About](https://cohenpert.me/#about): Background and exact honors and club membership stats.
+- [Ventures](https://cohenpert.me/#company): The Pert Group LLC and Pert Digital. One painting client's results: 30 leads in 30 days, 10 booked estimates, 3 closed projects, about $20K in revenue. One client's results. Not a guarantee.
+- [Projects](https://cohenpert.me/#work): Real Estate Investment Platform, Mobile Food Business OS, Private Investment Fund.
+- [Journey](https://cohenpert.me/#timeline): Ventures, finance, leadership, work, and honors.
+- [Leadership](https://cohenpert.me/#leadership): Lambert Investment Club, Lambert Entrepreneurship Club, Junior Law Society, Forsyth YMSL, and FBLA.
+- [Honors](https://cohenpert.me/#honors): Five honors and awards.
+- [Education](https://cohenpert.me/#education): Lambert High School class of 2028, Georgia State dual enrollment, certifications.
+- [Behind the Scenes](https://cohenpert.me/#behind-the-scenes): Business and investment work photos.
+- [How I Work](https://cohenpert.me/#how): Systems-first thinking, practical tech stacks, long-term focus, reliability and security.
+- [Contact](https://cohenpert.me/#contact): cohen@pertdigital.com, cohenpert@gmail.com, cohen@the-pert-group.com, +1 (470) 256-5977.
 
-- [Home](/): Overview of Cohen Pert, his work, projects, and contact info.
-- [About / Founder Intro](/#about): Who Cohen is, key metrics, and links to The Pert Group and LinkedIn.
-- [What I Run](/#company): Organizations and ventures Cohen leads, including The Pert Group.
-- [Featured Projects](/#work): Real estate, food business OS, investment fund, and other builds.
-- [Journey / Timeline](/#timeline): Milestones across Cohen's entrepreneurial path.
-- [How I Work](/#how): Operating principles and approach to building.
-- [Contact](/#contact): Book a call or reach out directly.
-
-## Optional
-
-- [The Pert Group](https://the-pert-group.com): AI consulting agency founded by Cohen Pert.
+## External links
+- [Pert Digital](https://pertdigital.com): Service delivery arm of The Pert Group.
+- [The Pert Group](https://the-pert-group.com): Private holding company.
 - [LinkedIn](https://www.linkedin.com/in/cohen-pert-a4bb51300/): Professional profile.
+- [Book a Call](https://cal.com/cohen-pert/30min): Booking.
