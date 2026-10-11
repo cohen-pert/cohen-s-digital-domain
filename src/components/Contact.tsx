@@ -40,8 +40,8 @@ const Contact = () => {
           <a href="mailto:cohen@the-pert-group.com" className="flex items-center gap-2 hover:text-gold transition-colors">
             <Mail className="w-4 h-4" /> cohen@the-pert-group.com
           </a>
-          <a href="tel:+14702565977" className="flex items-center gap-2 hover:text-gold transition-colors">
-            <Phone className="w-4 h-4" /> +1 (470) 256-5977
+          <a href="tel:+14703232832" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <Phone className="w-4 h-4" /> +1 (470) 323-2832
           </a>
         </div>
       </motion.div>
